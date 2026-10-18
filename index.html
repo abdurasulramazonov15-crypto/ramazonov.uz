@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdurasul Ramazonov | Buxgalter & Soliq Mutaxassisi | ACCA Nomzodi</title>
+  <meta name="description" content="Abdurasul Ramazonov - Buxgalter, Soliq va soliqqa tortish mutaxassisi, ACCA nomzodi. 1C:Buxgalteriya, soliq.uz, Didox, FinTech va Python avtomatlashtirish.">
+  <meta name="author" content="Abdurasul Ramazonov">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+
+  <!-- Fonts: Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            finance: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#0284c7',
+              600: '#0369a1',
+              700: '#075985',
+              800: '#0c4a6e',
+              900: '#082f49',
+              950: '#031726',
+            },
+            tax: {
+              50: '#ecfdf5',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Clean financial gradient */
+    .finance-subtle-glow {
+      background: radial-gradient(circle at 50% 0%, rgba(2, 132, 199, 0.08) 0%, transparent 65%);
+    }
+    
+    /* Print Styles for professional CV download */
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+        color: #0f172a !important;
+        font-size: 12pt;
+      }
+      .card-print {
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+        background: #ffffff !important;
+        page-break-inside: avoid;
+      }
+      a {
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-[#0b1120] text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-200 font-sans selection:bg-sky-500 selection:text-white">
+
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/90 dark:bg-[#0b1120]/90 border-b border-slate-200/80 dark:border-slate-800 transition-colors no-print">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-700 to-slate-900 dark:from-sky-600 dark:to-cyan-500 flex items-center justify-center text-white font-display font-bold text-base shadow-sm group-hover:scale-105 transition-transform">
+          AR
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-base sm:text-lg tracking-tight text-slate-900 dark:text-white leading-tight">
+            Abdurasul Ramazonov
+          </span>
+          <span class="text-[11px] font-medium text-sky-700 dark:text-sky-400">
+            ramazonov.uz
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-7 text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300">
+        <a href="#about" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors" data-i18n="nav_about">Men haqimda</a>
+        <a href="#skills" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors" data-i18n="nav_skills">Ko'nikmalar</a>
+        <a href="#education" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors" data-i18n="nav_edu">Ta'lim & ACCA</a>
+        <a href="#projects" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors" data-i18n="nav_projects">Loyihalar</a>
+        <a href="#interests" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors" data-i18n="nav_interests">Qiziqishlar</a>
+        <a href="#contact" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors" data-i18n="nav_contact">Bog'lanish</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-2.5">
+        <!-- Language Toggle -->
+        <button id="langToggle" class="px-2.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-700 dark:text-slate-200">
+          UZ / EN
+        </button>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggle" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon dark:hidden text-sm"></i>
+          <i class="fa-solid fa-sun hidden dark:inline text-sm text-amber-400"></i>
+        </button>
+
+        <!-- Print CV / Download PDF -->
+        <button onclick="window.print()" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-sky-600 dark:hover:bg-sky-500 text-white text-xs font-semibold shadow-sm transition">
+          <i class="fa-solid fa-file-pdf"></i>
+          <span data-i18n="btn_cv">CV yuklab olish</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden pt-10 pb-16 md:pt-16 md:pb-24 finance-subtle-glow">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-14">
+        
+        <!-- Left: Text & Bio -->
+        <div class="flex-1 text-center lg:text-left">
+          
+          <!-- Badges -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-4">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 text-xs font-semibold">
+              <i class="fa-solid fa-award text-amber-500 text-[11px]"></i>
+              <span>ACCA Nomzodi</span>
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 text-xs font-semibold">
+              <i class="fa-solid fa-scale-balanced text-[11px]"></i>
+              <span data-i18n="badge_tax">Soliq & Buxgalteriya</span>
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-xs font-medium">
+              <i class="fa-solid fa-robot text-sky-500 text-[11px]"></i>
+              <span>FinTech & AI</span>
+            </span>
+          </div>
+
+          <!-- Main Name -->
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight mb-3">
+            Abdurasul Ramazonov
+          </h1>
+
+          <!-- Role -->
+          <p class="text-base sm:text-lg text-slate-700 dark:text-slate-300 font-semibold mb-4" data-i18n="hero_role">
+            Buxgalter | Soliq va Soliqqa Tortish Mutaxassisi | ACCA Nomzodi
+          </p>
+
+          <!-- Bio -->
+          <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mb-6" data-i18n="hero_desc">
+            Toshkent Davlat Iqtisodiyot Universiteti "Soliq va soliqqa tortish" yo'nalishi talabasi. 1 yillik amaliy buxgalteriya tajribasi, milliy soliq qonunchiligi (QQS, Foyda solig'i, soliq auditi), 1C:Buxgalteriya va ACCA (IAS 16, IAS 38) xalqaro standartlari bo'yicha mustahkam bilimga ega mutaxassis. Moliyaviy hisobni zamonaviy texnologiyalar (Python, Gemini AI) orqali avtomatlashtirish tarafdori.
+          </p>
+
+          <!-- Quick Action Buttons -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-8 no-print">
+            <a href="https://t.me/ABDURASUL_N1" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-semibold text-xs shadow-sm transition hover:scale-105">
+              <i class="fa-brands fa-telegram text-sm"></i>
+              <span>Telegram: @ABDURASUL_N1</span>
+            </a>
+
+            <a href="tel:+998906441100" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700 text-white font-semibold text-xs transition hover:scale-105">
+              <i class="fa-solid fa-phone text-xs"></i>
+              <span>+998 90 644 11 00</span>
+            </a>
+
+            <a href="mailto:abdurasulramazonov15@gmail.com" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-medium transition">
+              <i class="fa-solid fa-envelope text-slate-500"></i>
+              <span>Email</span>
+            </a>
+          </div>
+
+          <!-- Key Metrics -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-slate-200 dark:border-slate-800 text-left">
+            <div class="bg-white dark:bg-slate-900/60 p-3 rounded-xl border border-slate-200/60 dark:border-slate-800">
+              <div class="text-xs text-slate-500 dark:text-slate-400" data-i18n="metric_exp_label">Amaliy Tajriba</div>
+              <div class="text-base font-bold font-display text-slate-900 dark:text-white mt-0.5" data-i18n="metric_exp_val">1+ Yil</div>
+            </div>
+            <div class="bg-white dark:bg-slate-900/60 p-3 rounded-xl border border-slate-200/60 dark:border-slate-800">
+              <div class="text-xs text-slate-500 dark:text-slate-400" data-i18n="metric_edu_label">Oliy Ta'lim</div>
+              <div class="text-base font-bold font-display text-slate-900 dark:text-white mt-0.5">TDIU 3-kurs</div>
+            </div>
+            <div class="bg-white dark:bg-slate-900/60 p-3 rounded-xl border border-slate-200/60 dark:border-slate-800">
+              <div class="text-xs text-slate-500 dark:text-slate-400" data-i18n="metric_acca_label">Standartlar</div>
+              <div class="text-base font-bold font-display text-slate-900 dark:text-white mt-0.5">ACCA (IAS)</div>
+            </div>
+            <div class="bg-white dark:bg-slate-900/60 p-3 rounded-xl border border-slate-200/60 dark:border-slate-800">
+              <div class="text-xs text-slate-500 dark:text-slate-400" data-i18n="metric_tech_label">Avtomatlashtirish</div>
+              <div class="text-base font-bold font-display text-slate-900 dark:text-white mt-0.5">Python & AI</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Professional Card / Avatar Placeholder -->
+        <div class="w-full max-w-xs sm:max-w-sm flex-shrink-0">
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-xl card-print">
+            
+            <!-- Avatar Frame -->
+            <div class="w-32 h-32 mx-auto rounded-2xl bg-gradient-to-tr from-sky-600 via-slate-800 to-emerald-600 p-0.5 mb-5 shadow-md">
+              <div class="w-full h-full rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden relative">
+                <!-- Avatar image (if avatar.jpg exists, loads photo; else shows icon) -->
+                <img src="avatar.jpg" alt="Abdurasul Ramazonov" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="w-full h-full object-cover">
+                <div class="w-full h-full hidden flex-col items-center justify-center text-slate-700 dark:text-slate-200">
+                  <i class="fa-solid fa-user-tie text-4xl text-sky-600 dark:text-sky-400 mb-1"></i>
+                  <span class="text-[10px] font-semibold text-slate-500">AR</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Profile Info in Card -->
+            <div class="text-center">
+              <h2 class="text-lg font-bold font-display text-slate-900 dark:text-white">Abdurasul Ramazonov</h2>
+              <p class="text-xs text-sky-600 dark:text-sky-400 font-medium mt-0.5" data-i18n="card_subtitle">Buxgalteriya & Soliq Maslahatchisi</p>
+            </div>
+
+            <!-- Contact List Items -->
+            <div class="mt-5 pt-4 border-t border-slate-100 dark:border-slate-800 space-y-2.5 text-xs text-slate-600 dark:text-slate-300">
+              <a href="tel:+998906441100" class="flex items-center gap-2.5 hover:text-sky-600 dark:hover:text-sky-400 transition">
+                <div class="w-6 h-6 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-sky-600">
+                  <i class="fa-solid fa-phone text-[11px]"></i>
+                </div>
+                <span>+998 90 644 11 00</span>
+              </a>
+
+              <a href="https://t.me/ABDURASUL_N1" target="_blank" class="flex items-center gap-2.5 hover:text-sky-600 dark:hover:text-sky-400 transition">
+                <div class="w-6 h-6 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-sky-500">
+                  <i class="fa-brands fa-telegram text-[12px]"></i>
+                </div>
+                <span>@ABDURASUL_N1</span>
+              </a>
+
+              <a href="mailto:abdurasulramazonov15@gmail.com" class="flex items-center gap-2.5 hover:text-sky-600 dark:hover:text-sky-400 transition">
+                <div class="w-6 h-6 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-emerald-600">
+                  <i class="fa-solid fa-envelope text-[11px]"></i>
+                </div>
+                <span class="truncate">abdurasulramazonov15@gmail.com</span>
+              </a>
+
+              <div class="flex items-center gap-2.5">
+                <div class="w-6 h-6 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-amber-500">
+                  <i class="fa-solid fa-location-dot text-[11px]"></i>
+                </div>
+                <span data-i18n="card_loc">Toshkent, O'zbekiston</span>
+              </div>
+            </div>
+
+            <!-- Direct Contact Button in Card -->
+            <div class="mt-5 pt-4 border-t border-slate-100 dark:border-slate-800 no-print">
+              <a href="#contact" class="block w-full py-2.5 text-center text-xs font-semibold rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-white transition" data-i18n="btn_contact_card">
+                Aloqaga chiqish
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Detailed Section -->
+  <section id="about" class="py-12 md:py-16 bg-white dark:bg-slate-900/50 border-y border-slate-200/80 dark:border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-1" data-i18n="sec_about_tag">Kasbiy Profil</h2>
+        <p class="text-2xl sm:text-3xl font-display font-bold text-slate-900 dark:text-white" data-i18n="sec_about_title">Men Haqimda</p>
+      </div>
+
+      <div class="prose prose-slate dark:prose-invert max-w-none text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
+        <p data-i18n="about_p1">
+          Toshkent Davlat Iqtisodiyot Universiteti (TDIU) "Soliq va soliqqa tortish" yo'nalishi 3-kurs talabasiman. 1 yillik amaliy buxgalteriya tajribasiga egaman. Milliy soliq qonunchiligi (QQS, Foyda solig'i, soliq auditi) va 1C:Buxgalteriya dasturida amaliy hisob yuritish bo'yicha chuqur bilimga egaman.
+        </p>
+        <p data-i18n="about_p2">
+          Hozirda moliyaviy hisobning xalqaro standartlarini egallash maqsadida <strong>ACCA kvalifikatsiyasi</strong> bo'yicha ta'lim olmoqdaman. Asosiy vositalar (IAS 16) hamda nomoddiy aktivlar (IAS 38) xalqaro standartlari bo'yicha amaliy va nazariy tayyorgarlikka egaman.
+        </p>
+        <p data-i18n="about_p3">
+          <strong>Moliyaviy va buxgalteriya hisobini avtomatlashtirishga</strong> alohida qiziqaman — Python va Sun'iy Intelekt (AI) texnologiyalaridan foydalanib, moliyaviy jarayonlarni, qonunchilik monitoringini va hisobotlarni optimallashtirish bo'yicha shaxsiy amaliy loyihalarni amalga oshirib kelmoqdaman.
+        </p>
+      </div>
+
+      <!-- Core Highlights (3 Columns) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800">
+          <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center text-lg mb-3">
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1" data-i18n="card_tax_title">Soliq & Milliy Qonunchilik</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed" data-i18n="card_tax_desc">
+            soliq.uz, Didox, QQS, Foyda solig'i hisobotlari va soliq auditi talablari bo'yicha puxta tajriba.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-lg mb-3">
+            <i class="fa-solid fa-earth-americas"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1" data-i18n="card_acca_title">ACCA & Xalqaro Standartlar</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed" data-i18n="card_acca_desc">
+            Xalqaro moliyaviy hisobot standartlari (IFRS / IAS 16, IAS 38) bo'yicha professional ta'lim.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-lg mb-3">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1" data-i18n="card_fintech_title">FinTech & Avtomatlashtirish</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed" data-i18n="card_fintech_desc">
+            Python va Gemini AI orqali soliq ma'lumotlarini saralash, tahlil qilish va vaqtni tejash tizimlari.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills Section (Buxgalteriya + Texnik) -->
+  <section id="skills" class="py-12 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-1" data-i18n="sec_skills_tag">Amaliy bilim va vositalar</h2>
+        <p class="text-2xl sm:text-3xl font-display font-bold text-slate-900 dark:text-white" data-i18n="sec_skills_title">Kasbiy Ko'nikmalar</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Column 1: Buxgalteriya va Soliq Portallari -->
+        <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-sm card-print">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-11 h-11 rounded-xl bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white" data-i18n="skill_block1_title">Buxgalteriya va Soliq Portallari Bilan Ishlash</h3>
+              <p class="text-xs text-slate-500" data-i18n="skill_block1_sub">Amaliy hisob yuritish, elektron hujjat aylanishi va audit</p>
+            </div>
+          </div>
+
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-emerald-500 mt-1 flex-shrink-0"></i>
+              <span><strong>1C:Buxgalteriya:</strong> Korxona hisobini yuritish, bazani dastlabki sozlash va provodkalar.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-emerald-500 mt-1 flex-shrink-0"></i>
+              <span><strong>Soliq portallari (soliq.uz):</strong> Elektron xizmatlar, soliq hisobotlarini shakllantirish va topshirish (QQS, Foyda solig'i).</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-emerald-500 mt-1 flex-shrink-0"></i>
+              <span><strong>Didox / Factura.uz:</strong> Elektron hisob-fakturalar (EHF), ishonchnoma va shartnomalarni shakllantirish, jo'natish hamda qabul qilish.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-emerald-500 mt-1 flex-shrink-0"></i>
+              <span><strong>my.mehnat.uz:</strong> Mehnat shartnomalarini ro'yxatdan o'tkazish, elektron mehnat daftarchalari va shtat jadvalini shakllantirish.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-emerald-500 mt-1 flex-shrink-0"></i>
+              <span><strong>Soliq auditi va nazorati:</strong> Tekshiruvlar talablariga muvofiq birlamchi hujjatlarni rasmiylashtirish.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-emerald-500 mt-1 flex-shrink-0"></i>
+              <span><strong>Xalqaro standartlar:</strong> Asosiy vositalar va nomoddiy aktivlar hisobi (IAS 16, IAS 38).</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-emerald-500 mt-1 flex-shrink-0"></i>
+              <span><strong>Moliyaviy tahlil:</strong> Moliyaviy hisobotlarni tahlil qilish va amaliy buxgalteriya provodkalari.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Texnik Ko'nikmalar & Avtomatlashtirish -->
+        <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-sm card-print flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-11 h-11 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-slate-900 dark:text-white" data-i18n="skill_block2_title">Texnik Ko'nikmalar va Avtomatlashtirish</h3>
+                <p class="text-xs text-slate-500" data-i18n="skill_block2_sub">Dasturlash, sun'iy intellekt va server texnologiyalari</p>
+              </div>
+            </div>
+
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-6">
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-sky-500 mt-1 flex-shrink-0"></i>
+                <span><strong>Python:</strong> Telethon API, ma'lumotlar tahlili va REST API integratsiyalari.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-sky-500 mt-1 flex-shrink-0"></i>
+                <span><strong>Sun'iy Intellekt (Gemini AI):</strong> Buxgalteriya va soliq yangiliklarini avtomatlashtirilgan tahlil qilishda AI imkoniyatlarini qo'llash.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-sky-500 mt-1 flex-shrink-0"></i>
+                <span><strong>Web-domenlar & Server sozlamalari:</strong> Cloudflare DNS boshqaruvi, xavfsizlik va Render xosting sozlamalari.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Quick tags box -->
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-800">
+            <span class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider block mb-2" data-i18n="tags_label">Texnologik vositalar:</span>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-1 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs font-medium">1C:Buxgalteriya 8.3</span>
+              <span class="px-2.5 py-1 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs font-medium">soliq.uz</span>
+              <span class="px-2.5 py-1 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs font-medium">Didox.uz</span>
+              <span class="px-2.5 py-1 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs font-medium">Factura.uz</span>
+              <span class="px-2.5 py-1 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs font-medium">my.mehnat.uz</span>
+              <span class="px-2.5 py-1 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs font-medium">Python 3</span>
+              <span class="px-2.5 py-1 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs font-medium">Gemini AI</span>
+              <span class="px-2.5 py-1 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs font-medium">Cloudflare</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Education & ACCA Section -->
+  <section id="education" class="py-12 md:py-16 bg-white dark:bg-slate-900/50 border-y border-slate-200/80 dark:border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-1" data-i18n="sec_edu_tag">Akademik va professional yo'l</h2>
+        <p class="text-2xl sm:text-3xl font-display font-bold text-slate-900 dark:text-white" data-i18n="sec_edu_title">Ta'lim va Sertifikatlar</p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- TDIU -->
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4 card-print">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-sky-600/10 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl flex-shrink-0 mt-0.5">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-base text-slate-900 dark:text-white">Toshkent Davlat Iqtisodiyot Universiteti (TDIU)</h3>
+              <p class="text-xs sm:text-sm text-sky-700 dark:text-sky-300 font-medium">Soliq va soliqqa tortish (Bakalavr, 3-kurs)</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                Davlat soliq tizimi, soliq siyosati, korxonalar soliq hisobi va moliyaviy audit fanlari bo'yicha fundamental akademik bilimlar.
+              </p>
+            </div>
+          </div>
+          <div class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-sky-100 dark:bg-sky-950/60 text-sky-800 dark:text-sky-300 border border-sky-200 dark:border-sky-800 self-start sm:self-auto whitespace-nowrap">
+            2023 - Hozirgacha
+          </div>
+        </div>
+
+        <!-- ACCA -->
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4 card-print">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-xl flex-shrink-0 mt-0.5">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-base text-slate-900 dark:text-white">ACCA Qualification</h3>
+              <p class="text-xs sm:text-sm text-amber-600 dark:text-amber-400 font-medium">ACCA Nomzodi — Xalqaro moliyaviy hisob standartlari</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                IAS 16 (Asosiy vositalar), IAS 38 (Nomoddiy aktivlar) va xalqaro moliyaviy hisobot standartlari (IFRS) bo'yicha tayyorgarlik.
+              </p>
+            </div>
+          </div>
+          <div class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800 self-start sm:self-auto whitespace-nowrap">
+            O'qimoqda / Nomzod
+          </div>
+        </div>
+
+        <!-- Amaliy Buxgalteriya Kursi -->
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4 card-print">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl flex-shrink-0 mt-0.5">
+              <i class="fa-solid fa-certificate"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-base text-slate-900 dark:text-white">Amaliy Buxgalteriya Kursi</h3>
+              <p class="text-xs sm:text-sm text-emerald-600 dark:text-emerald-400 font-medium">Buxgalteriya va Soliq Hisobi, 1C Tizimi</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                Korxonalarda hisob yuritish, schyotlar rejasi, dastlabki hujjatlar aylanishi va soliq hisobotlarini amaliy topshirish kursi to'liq tamomlangan.
+              </p>
+            </div>
+          </div>
+          <div class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 self-start sm:self-auto whitespace-nowrap">
+            Tamomlangan
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Projects & Case Studies -->
+  <section id="projects" class="py-12 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-1" data-i18n="sec_proj_tag">Amaliyot va tajriba</h2>
+        <p class="text-2xl sm:text-3xl font-display font-bold text-slate-900 dark:text-white" data-i18n="sec_proj_title">Amaliy va Texnik Loyihalar</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Project 1: AI & Soliq Bot -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between card-print">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 text-xs font-semibold">
+                <i class="fa-brands fa-telegram"></i> FinTech & AI Bot
+              </span>
+              <span class="text-xs text-slate-400">Python + Gemini</span>
+            </div>
+
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2" data-i18n="proj1_title">Soliq Yangiliklarini Avtomatlashtirish Boti</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4" data-i18n="proj1_desc">
+              Python va Gemini AI yordamida ishlab chiqilgan maxsus tizim. Rasmiy manbalardan kelayotgan soliq qonunchiligi o'zgarishlari va yangiliklarni avtomatik ravishda tahlil qiladi, muhim qismlarini saralaydi va Telegram kanallariga muntazam ravishda uzatadi.
+            </p>
+          </div>
+
+          <div>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-100 dark:border-slate-800">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[11px]">Python</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[11px]">Telethon API</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[11px]">Gemini AI</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[11px]">Render Host</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: 1C Korxona bazasi sozlamalari -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between card-print">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 text-xs font-semibold">
+                <i class="fa-solid fa-database"></i> 1C:Buxgalteriya
+              </span>
+              <span class="text-xs text-slate-400">Amaliy Buxgalteriya</span>
+            </div>
+
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2" data-i18n="proj2_title">1C Buxgalteriya va Tizim Sozlamalari</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4" data-i18n="proj2_desc">
+              Yangi tashkil etilgan korxonalar uchun 1C bazasida hisob siyosatini shakllantirish, ustav kapitali shakllanishi provodkalari va soliq inspeksiyasi parametrlarini to'g'ri kiritish hamda hisob registrlarini tartibga solish bo'yicha amaliy keyslar.
+            </p>
+          </div>
+
+          <div>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-100 dark:border-slate-800">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[11px]">1C:Buxgalteriya 8.3</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[11px]">Ustav Kapitali</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[11px]">Hisob Siyosati</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[11px]">Soliq Parametrlari</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Personal Interests (Shaxsiy Qiziqishlar) -->
+  <section id="interests" class="py-12 md:py-16 bg-white dark:bg-slate-900/50 border-y border-slate-200/80 dark:border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-1" data-i18n="sec_int_tag">Shaxsiy rivojlanish</h2>
+        <p class="text-2xl sm:text-3xl font-display font-bold text-slate-900 dark:text-white" data-i18n="sec_int_title">Shaxsiy Qiziqishlar</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        
+        <!-- Interest 1 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 text-center">
+          <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl mx-auto mb-3">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-1.5" data-i18n="int1_title">Mantiq va Matematika</h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed" data-i18n="int1_desc">
+            Mantiqiy masalalar hamda matematik olimpiada topshiriqlarini tahlil qilish va yechish.
+          </p>
+        </div>
+
+        <!-- Interest 2 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 text-center">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-xl mx-auto mb-3">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-1.5" data-i18n="int2_title">Adabiyot va Falsafa</h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed" data-i18n="int2_desc">
+            Badiiy adabiyot va falsafiy asarlarni chuqur mutolaa qilish orqali dunyoqarashni kengaytirish.
+          </p>
+        </div>
+
+        <!-- Interest 3 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 text-center">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl mx-auto mb-3">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-1.5" data-i18n="int3_title">FinTech & Texnologiyalar</h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed" data-i18n="int3_desc">
+            Dasturlash, sun'iy intellekt va moliyaviy texnologiyalarning (FinTech) rivojlanishini kuzatish.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-12 md:py-20 bg-slate-900 text-white relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-1" data-i18n="sec_contact_tag">Bog'lanish</h2>
+        <p class="text-2xl sm:text-3xl font-display font-bold" data-i18n="sec_contact_title">Hamkorlik yoki Maslahat Uchun</p>
+        <p class="text-slate-400 text-xs sm:text-sm mt-2" data-i18n="sec_contact_sub">Buxgalteriya xizmatlari, soliq hisoboti yoki maslahat bo'yicha bog'lanishingiz mumkin.</p>
+      </div>
+
+      <!-- 3 Direct Contact Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        
+        <!-- Telegram -->
+        <a href="https://t.me/ABDURASUL_N1" target="_blank" class="p-5 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 text-center transition group">
+          <div class="w-11 h-11 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-xl mx-auto mb-3 group-hover:scale-110 transition">
+            <i class="fa-brands fa-telegram"></i>
+          </div>
+          <h4 class="font-bold text-white text-sm">Telegram</h4>
+          <p class="text-xs text-sky-400 mt-1">@ABDURASUL_N1</p>
+          <span class="inline-block mt-2 text-[11px] text-slate-400 font-medium" data-i18n="contact_tg_btn">Xabar yozish &rarr;</span>
+        </a>
+
+        <!-- Phone -->
+        <a href="tel:+998906441100" class="p-5 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 text-center transition group">
+          <div class="w-11 h-11 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl mx-auto mb-3 group-hover:scale-110 transition">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <h4 class="font-bold text-white text-sm">Telefon</h4>
+          <p class="text-xs text-emerald-400 mt-1">+998 90 644 11 00</p>
+          <span class="inline-block mt-2 text-[11px] text-slate-400 font-medium" data-i18n="contact_phone_btn">Qo'ng'iroq qilish &rarr;</span>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:abdurasulramazonov15@gmail.com" class="p-5 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 text-center transition group">
+          <div class="w-11 h-11 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl mx-auto mb-3 group-hover:scale-110 transition">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <h4 class="font-bold text-white text-sm">Email</h4>
+          <p class="text-xs text-indigo-400 mt-1 truncate">abdurasulramazonov15@gmail.com</p>
+          <span class="inline-block mt-2 text-[11px] text-slate-400 font-medium" data-i18n="contact_email_btn">Xat yuborish &rarr;</span>
+        </a>
+
+      </div>
+
+      <!-- Quick Message Form -->
+      <div class="bg-slate-800/70 p-6 sm:p-8 rounded-3xl border border-slate-700/80 max-w-lg mx-auto no-print">
+        <form onsubmit="event.preventDefault(); window.location.href='https://t.me/ABDURASUL_N1';" class="space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1" data-i18n="form_name">Ismingiz / Korxona nomi</label>
+            <input type="text" required placeholder="Masalan: MCHJ rahbari..." class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs placeholder-slate-500 focus:outline-none focus:border-sky-500">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1" data-i18n="form_contact">Telegram yoki Telefon raqamingiz</label>
+            <input type="text" required placeholder="+998 90 ... yoki @username" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs placeholder-slate-500 focus:outline-none focus:border-sky-500">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1" data-i18n="form_msg">Xabar yoki savol</label>
+            <textarea rows="3" required placeholder="Qaysi xizmat yoki masala bo'yicha..." class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs placeholder-slate-500 focus:outline-none focus:border-sky-500"></textarea>
+          </div>
+          <button type="submit" class="w-full py-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-xs transition duration-150" data-i18n="btn_submit_tg">
+            Telegram Orqali Bog'lanish
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-slate-950 border-t border-slate-800 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <p>&copy; 2026 Abdurasul Ramazonov. Barcha huquqlar himoyalangan.</p>
+      <p>Domen: <span class="text-sky-400 font-semibold">ramazonov.uz</span></p>
+    </div>
+  </footer>
+
+  <!-- Script for Theme Toggle & Language Toggle (UZ / EN) -->
+  <script>
+    // Theme Switcher (Dark / Light)
+    const themeToggleBtn = document.getElementById('themeToggle');
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.theme = 'light';
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.theme = 'dark';
+      }
+    });
+
+    // Language Toggle (UZ / EN)
+    let currentLang = 'uz';
+    const translations = {
+      uz: {
+        nav_about: "Men haqimda",
+        nav_skills: "Ko'nikmalar",
+        nav_edu: "Ta'lim & ACCA",
+        nav_projects: "Loyihalar",
+        nav_interests: "Qiziqishlar",
+        nav_contact: "Bog'lanish",
+        btn_cv: "CV yuklab olish",
+        badge_tax: "Soliq & Buxgalteriya",
+        hero_role: "Buxgalter | Soliq va Soliqqa Tortish Mutaxassisi | ACCA Nomzodi",
+        hero_desc: "Toshkent Davlat Iqtisodiyot Universiteti \"Soliq va soliqqa tortish\" yo'nalishi talabasi. 1 yillik amaliy buxgalteriya tajribasi, milliy soliq qonunchiligi (QQS, Foyda solig'i, soliq auditi), 1C:Buxgalteriya va ACCA (IAS 16, IAS 38) xalqaro standartlari bo'yicha mustahkam bilimga ega mutaxassis. Moliyaviy hisobni zamonaviy texnologiyalar (Python, Gemini AI) orqali avtomatlashtirish tarafdori.",
+        metric_exp_label: "Amaliy Tajriba",
+        metric_exp_val: "1+ Yil",
+        metric_edu_label: "Oliy Ta'lim",
+        metric_acca_label: "Standartlar",
+        metric_tech_label: "Avtomatlashtirish",
+        card_subtitle: "Buxgalteriya & Soliq Maslahatchisi",
+        card_loc: "Toshkent, O'zbekiston",
+        btn_contact_card: "Aloqaga chiqish",
+        sec_about_tag: "Kasbiy Profil",
+        sec_about_title: "Men Haqimda",
+        about_p1: "Toshkent Davlat Iqtisodiyot Universiteti (TDIU) \"Soliq va soliqqa tortish\" yo'nalishi 3-kurs talabasiman. 1 yillik amaliy buxgalteriya tajribasiga egaman. Milliy soliq qonunchiligi (QQS, Foyda solig'i, soliq auditi) va 1C:Buxgalteriya dasturida amaliy hisob yuritish bo'yicha chuqur bilimga egaman.",
+        about_p2: "Hozirda moliyaviy hisobning xalqaro standartlarini egallash maqsadida ACCA kvalifikatsiyasi bo'yicha ta'lim olmoqdaman. Asosiy vositalar (IAS 16) hamda nomoddiy aktivlar (IAS 38) xalqaro standartlari bo'yicha amaliy va nazariy tayyorgarlikka egaman.",
+        about_p3: "Moliyaviy va buxgalteriya hisobini avtomatlashtirishga alohida qiziqaman — Python va Sun'iy Intelekt (AI) texnologiyalaridan foydalanib, moliyaviy jarayonlarni, qonunchilik monitoringini va hisobotlarni optimallashtirish bo'yicha shaxsiy amaliy loyihalarni amalga oshirib kelmoqdaman.",
+        card_tax_title: "Soliq & Milliy Qonunchilik",
+        card_tax_desc: "soliq.uz, Didox, QQS, Foyda solig'i hisobotlari va soliq auditi talablari bo'yicha puxta tajriba.",
+        card_acca_title: "ACCA & Xalqaro Standartlar",
+        card_acca_desc: "Xalqaro moliyaviy hisobot standartlari (IFRS / IAS 16, IAS 38) bo'yicha professional ta'lim.",
+        card_fintech_title: "FinTech & Avtomatlashtirish",
+        card_fintech_desc: "Python va Gemini AI orqali soliq ma'lumotlarini saralash, tahlil qilish va vaqtni tejash tizimlari.",
+        sec_skills_tag: "Amaliy bilim va vositalar",
+        sec_skills_title: "Kasbiy Ko'nikmalar",
+        skill_block1_title: "Buxgalteriya va Soliq Portallari Bilan Ishlash",
+        skill_block1_sub: "Amaliy hisob yuritish, elektron hujjat aylanishi va audit",
+        skill_block2_title: "Texnik Ko'nikmalar va Avtomatlashtirish",
+        skill_block2_sub: "Dasturlash, sun'iy intellekt va server texnologiyalari",
+        tags_label: "Texnologik vositalar:",
+        sec_edu_tag: "Akademik va professional yo'l",
+        sec_edu_title: "Ta'lim va Sertifikatlar",
+        sec_proj_tag: "Amaliyot va tajriba",
+        sec_proj_title: "Amaliy va Texnik Loyihalar",
+        proj1_title: "Soliq Yangiliklarini Avtomatlashtirish Boti",
+        proj1_desc: "Python va Gemini AI yordamida ishlab chiqilgan maxsus tizim. Rasmiy manbalardan kelayotgan soliq qonunchiligi o'zgarishlari va yangiliklarni avtomatik ravishda tahlil qiladi, muhim qismlarini saralaydi va Telegram kanallariga muntazam ravishda uzatadi.",
+        proj2_title: "1C Buxgalteriya va Tizim Sozlamalari",
+        proj2_desc: "Yangi tashkil etilgan korxonalar uchun 1C bazasida hisob siyosatini shakllantirish, ustav kapitali shakllanishi provodkalari va soliq inspeksiyasi parametrlarini to'g'ri kiritish hamda hisob registrlarini tartibga solish bo'yicha amaliy keyslar.",
+        sec_int_tag: "Shaxsiy rivojlanish",
+        sec_int_title: "Shaxsiy Qiziqishlar",
+        int1_title: "Mantiq va Matematika",
+        int1_desc: "Mantiqiy masalalar hamda matematik olimpiada topshiriqlarini tahlil qilish va yechish.",
+        int2_title: "Adabiyot va Falsafa",
+        int2_desc: "Badiiy adabiyot va falsafiy asarlarni chuqur mutolaa qilish orqali dunyoqarashni kengaytirish.",
+        int3_title: "FinTech & Texnologiyalar",
+        int3_desc: "Dasturlash, sun'iy intellekt va moliyaviy texnologiyalarning (FinTech) rivojlanishini kuzatish.",
+        sec_contact_tag: "Bog'lanish",
+        sec_contact_title: "Hamkorlik yoki Maslahat Uchun",
+        sec_contact_sub: "Buxgalteriya xizmatlari, soliq hisoboti yoki maslahat bo'yicha bog'lanishingiz mumkin.",
+        contact_tg_btn: "Xabar yozish \u2192",
+        contact_phone_btn: "Qo'ng'iroq qilish \u2192",
+        contact_email_btn: "Xat yuborish \u2192",
+        form_name: "Ismingiz / Korxona nomi",
+        form_contact: "Telegram yoki Telefon raqamingiz",
+        form_msg: "Xabar yoki savol",
+        btn_submit_tg: "Telegram Orqali Bog'lanish"
+      },
+      en: {
+        nav_about: "About Me",
+        nav_skills: "Skills",
+        nav_edu: "Education & ACCA",
+        nav_projects: "Projects",
+        nav_interests: "Interests",
+        nav_contact: "Contact",
+        btn_cv: "Download CV",
+        badge_tax: "Tax & Accounting",
+        hero_role: "Accountant | Tax Specialist | ACCA Candidate",
+        hero_desc: "Tax and Taxation student at Tashkent State University of Economics (TSUE). Possesses 1 year of hands-on accounting experience, deep expertise in national tax legislation (VAT, Corporate Tax, Tax Auditing), 1C:Enterprise, and international accounting standards (IAS 16, IAS 38 via ACCA). Strong advocate of financial process automation through Python and AI.",
+        metric_exp_label: "Practical Exp.",
+        metric_exp_val: "1+ Year",
+        metric_edu_label: "University",
+        metric_acca_label: "Standards",
+        metric_tech_label: "Automation",
+        card_subtitle: "Accounting & Tax Consultant",
+        card_loc: "Tashkent, Uzbekistan",
+        btn_contact_card: "Get in touch",
+        sec_about_tag: "Professional Profile",
+        sec_about_title: "About Me",
+        about_p1: "3rd-year student at Tashkent State University of Economics (TSUE) majoring in Tax and Taxation. Over 1 year of practical accounting experience with in-depth knowledge of national tax laws (VAT, Corporate Profit Tax, tax audit protocols), and accounting execution in 1C:Enterprise.",
+        about_p2: "Currently pursuing the ACCA qualification to master International Financial Reporting Standards. Solid grounding in Property, Plant and Equipment (IAS 16) and Intangible Assets (IAS 38).",
+        about_p3: "Passionate about financial and bookkeeping automation — leveraging Python and Artificial Intelligence (Gemini AI) to streamline financial workflows, track regulatory updates, and optimize reporting pipelines.",
+        card_tax_title: "Taxation & National Compliance",
+        card_tax_desc: "Hands-on expertise with soliq.uz, Didox, VAT/Profit tax filings, and tax audit compliance.",
+        card_acca_title: "ACCA & International Standards",
+        card_acca_desc: "Professional training under International Accounting Standards (IFRS / IAS 16, IAS 38).",
+        card_fintech_title: "FinTech & Process Automation",
+        card_fintech_desc: "Building systems using Python & Gemini AI to parse, analyze, and automate fiscal information.",
+        sec_skills_tag: "Practical Stack",
+        sec_skills_title: "Professional Skills",
+        skill_block1_title: "Accounting & Tax Portal Operations",
+        skill_block1_sub: "Practical bookkeeping, electronic documentation, and audit",
+        skill_block2_title: "Technical Skills & Automation",
+        skill_block2_sub: "Programming, artificial intelligence, and server configuration",
+        tags_label: "Technical Stack:",
+        sec_edu_tag: "Academic & Professional Track",
+        sec_edu_title: "Education & Certifications",
+        sec_proj_tag: "Practical Experience",
+        sec_proj_title: "Practical & Technical Projects",
+        proj1_title: "Automated Tax Intelligence Bot",
+        proj1_desc: "Custom-built system using Python and Gemini AI that continuously ingests, analyzes, summarizes official tax law updates, and broadcasts key digests to Telegram channels.",
+        proj2_title: "1C Accounting & System Architecture",
+        proj2_desc: "Hands-on implementation of enterprise accounting policies, charter capital entries, and tax inspection registry configurations in 1C:Enterprise.",
+        sec_int_tag: "Personal Development",
+        sec_int_title: "Personal Interests",
+        int1_title: "Logic & Mathematics",
+        int1_desc: "Solving and analyzing mathematical olympiad and logical reasoning problems.",
+        int2_title: "Literature & Philosophy",
+        int2_desc: "Deep reading of classical and modern literature and philosophical essays.",
+        int3_title: "FinTech & Technologies",
+        int3_desc: "Tracking emerging paradigms in programming, AI agents, and financial technologies.",
+        sec_contact_tag: "Contact",
+        sec_contact_title: "Let's Collaborate",
+        sec_contact_sub: "Available for accounting services, tax consultations, or business partnerships.",
+        contact_tg_btn: "Send message \u2192",
+        contact_phone_btn: "Make a call \u2192",
+        contact_email_btn: "Send email \u2192",
+        form_name: "Your Name / Organization",
+        form_contact: "Telegram handle or Phone number",
+        form_msg: "Message or inquiry",
+        btn_submit_tg: "Connect via Telegram"
+      }
+    };
+
+    const langToggleBtn = document.getElementById('langToggle');
+    langToggleBtn.addEventListener('click', () => {
+      currentLang = currentLang === 'uz' ? 'en' : 'uz';
+      langToggleBtn.textContent = currentLang === 'uz' ? 'UZ / EN' : 'EN / UZ';
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[currentLang] && translations[currentLang][key]) {
+          el.textContent = translations[currentLang][key];
+        }
+      });
+    });
+  </script>
+</body>
+</html>
